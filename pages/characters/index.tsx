@@ -8,7 +8,6 @@ const Characters: NextPage = () => {
   useEffect(() => {
     const getCharacters = async () => {
       const res = await axios.get(`https://bobsburgers-api.herokuapp.com/characters/`);
-      console.log(res.data)
       setCharacters(res.data);
     };
     getCharacters();
