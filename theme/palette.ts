@@ -1,7 +1,7 @@
 const palette = {
     primary: {
-        main: '#ce4548',
-        light: '#b7242e',
+        main: '#b7242e',
+        light: '#ce4548',
         dark: '#8e1a1f'
     },
     secondary: {
@@ -28,7 +28,9 @@ const palette = {
         main: '#66bb6a',
         light: '#81c784',
         dark: '#388e3c'
-    }
+    },
+    black: '#000',
+    white: '#fff'
 }
 
 export default palette;

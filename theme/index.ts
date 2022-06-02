@@ -1,5 +1,5 @@
 import { ThemeOptions } from "@mui/material";
-import { createTheme } from "@mui/system";
+import { createTheme } from "@mui/material/styles";
 
 import palette from "./palette";
 import breakpoints from "./breakpoints";
