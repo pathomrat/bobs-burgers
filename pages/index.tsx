@@ -54,16 +54,7 @@ const Home: NextPage = () => {
         <TitleText variant="h1">Bob's Burgers</TitleText>
         <ul>
           <MenuItem>
-            <Typography variant="h4">Test</Typography>
-          </MenuItem>
-          <MenuItem>
-            <Typography variant="h4">Test</Typography>
-          </MenuItem>
-          <MenuItem>
-            <Typography variant="h4">Test</Typography>
-          </MenuItem>
-          <MenuItem>
-            <Typography variant="h4">Test</Typography>
+            <Typography variant="h4">characters</Typography>
           </MenuItem>
         </ul>
       </Menu>
