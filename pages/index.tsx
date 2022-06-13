@@ -1,6 +1,12 @@
 import type { NextPage } from "next";
 import { Box, styled } from "@mui/system";
 import { Typography } from "@mui/material";
+import { useRouter } from "next/router";
+
+interface LinkProps {
+  title: string;
+  link: string;
+}
 
 const BackgroundImg = styled(Box)({
   height: `100vh`,
@@ -45,17 +51,32 @@ const MenuItem = styled("li")(({ theme }) => ({
   },
 }));
 
+const links: LinkProps[] = [{ link: "characters", title: "Characters" }];
+
 const TitleText = styled(Typography)({});
 
 const Home: NextPage = () => {
+  const router = useRouter();
+
+  const handleClickLink = (link: string) => {
+    router.push(link);
+  };
+
   return (
     <BackgroundImg>
       <Menu>
         <TitleText variant="h1">Bob's Burgers</TitleText>
         <ul>
-          <MenuItem>
-            <Typography variant="h4">characters</Typography>
-          </MenuItem>
+          {links.map((link) => (
+            <MenuItem>
+              <Typography
+                variant="h4"
+                onClick={() => handleClickLink(link.link)}
+              >
+                {link.title}
+              </Typography>
+            </MenuItem>
+          ))}
         </ul>
       </Menu>
     </BackgroundImg>
